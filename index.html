@@ -3,25 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <title>Liderlik ve İletişim Testi</title>
+
 <style>
-body { font-family: Arial; padding: 20px; background:#f9f9f9 }
-.question { margin-bottom: 20px; background:#fff; padding:15px; border-radius:8px }
-button { padding: 12px 20px; font-size: 16px }
-#sonuc { margin-top: 30px; font-size: 22px; font-weight: bold }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.question {
+  background: #f4f6fb;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.question:hover {
+  transform: scale(1.01);
+}
+
+.question p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+label:hover {
+  background: #e0e7ff;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#sonuc {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #eef2ff;
+  text-align: center;
+  font-size: 22px;
+  display: none;
+}
 </style>
 </head>
+
 <body>
 
-<h2>Liderlik ve İletişim Tarzı Testi</h2>
+<div class="container">
+
+<h2>🧠 Liderlik ve İletişim Tarzı Testi</h2>
 
 <form id="testForm">
 
-<!-- SORU 1 -->
 <div class="question">
 <p>1. Konuşma konularınız genelde nasıldır?</p>
-<label><input type="radio" name="q1" value="A"> Sonuçlar, hedefler</label><br>
-<label><input type="radio" name="q1" value="B"> Hayaller ve arzular</label><br>
-<label><input type="radio" name="q1" value="C"> Duygular ve deneyimler</label><br>
+<label><input type="radio" name="q1" value="A"> Sonuçlar, hedefler</label>
+<label><input type="radio" name="q1" value="B"> Hayaller ve arzular</label>
+<label><input type="radio" name="q1" value="C"> Duygular ve deneyimler</label>
 <label><input type="radio" name="q1" value="D"> Gerçekler ve rakamlar</label>
 </div>
 
@@ -142,11 +229,13 @@ button { padding: 12px 20px; font-size: 16px }
 <label><input type="radio" name="q14" value="D"> Sorumluluk</label>
 </div>
 
-<button type="button" onclick="hesapla()">Sonucu Göster</button>
+<button type="button" onclick="hesapla()">✨ Sonucu Göster</button>
 
 </form>
 
 <div id="sonuc"></div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
