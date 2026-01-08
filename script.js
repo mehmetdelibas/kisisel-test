@@ -24,8 +24,10 @@ function hesapla() {
     D: "🦉 BAYKUŞ – Analitik, planlı ve mantıklı"
   };
 
-  document.getElementById("sonuc").innerHTML = `
-    <p>Sonucunuz:</p>
-    <strong>${sonucMetni[secilen]}</strong>
-  `;
-}
+let sonucDiv = document.getElementById("sonuc");
+sonucDiv.style.display = "block";
+
+sonucDiv.innerHTML = `
+  <p style="margin-bottom:10px;">🎯 Sonucunuz</p>
+  <strong>${sonucMetni[secilen]}</strong>
+`;
